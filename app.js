@@ -88,9 +88,10 @@ function initDBConnection() {
     db = cloudant.use(dbCredentials.dbName);
 }
 
-initDBConnection();
+// initDBConnection();
 
 app.get('/', routes.index);
+app.get('/users', user.list);
 
 function createResponseData(id, name, value, attachments) {
 
